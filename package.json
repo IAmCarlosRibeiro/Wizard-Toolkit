@@ -1,0 +1,19 @@
+{
+  "name": "wizard-toolkit-electron",
+  "version": "1.0.0",
+  "description": "Gerenciador de Poções e Feitiços",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w sqlite3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0"
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Wizard Toolkit - Legacy Edition</title>
+    <!-- Importando fontes mágicas do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+</head>
+<body>
+
+    <div id="sidebar">
+        <h2>Wizard Toolkit</h2>
+        <button class="menu-btn active" onclick="mostrarSecao('ingredientes')">Ingredientes</button>
+        <button class="menu-btn" onclick="mostrarSecao('feiticos')">Feitiços</button>
+        <button class="menu-btn" onclick="mostrarSecao('pocoes')">Poções</button>
+        <button class="menu-btn" onclick="mostrarSecao('criacao')">Criação / Fábrica</button>
+        <button class="menu-btn" onclick="window.wizardAPI.limparTabelas()" style="color: #ff6b6b; margin-top: auto;">LIMPAR TUDO</button>
+    </div>
+
+    <div id="content">
+        <!-- SEÇÃO INGREDIENTES -->
+        <div id="section-ingredientes" class="section active">
+            <h1>Gerenciar Ingredientes</h1>
+            <div class="input-group">
+                <h3>Cadastrar Novo</h3>
+                <input type="text" id="novo-ing-nome" placeholder="Nome do Ingrediente">
+                <button class="action-btn" onclick="uiCadastrarIngrediente()">Cadastrar</button>
+            </div>
+            <div id="tabela-ingredientes"></div>
+        </div>
+
+        <!-- SEÇÃO FEITIÇOS -->
+        <div id="section-feiticos" class="section">
+            <h1>Gerenciar Feitiços</h1>
+            <div class="input-group">
+                <h3>Cadastrar Novo Feitiço</h3>
+                <input type="text" id="novo-feitico-nome" placeholder="Nome">
+                <input type="text" id="novo-feitico-desc" placeholder="Descrição">
+                <br><br>
+                <small>Ingredientes necessários (Selecione e clique em adicionar à receita):</small>
+                <div style="display: flex; gap: 10px; align-items: center; margin-top: 5px;">
+                    <select id="select-ingrediente-receita-feitico"></select>
+                    <button class="action-btn" onclick="adicionarIngredienteReceitaTemp('feitico')">+</button>
+                </div>
+                <div id="receita-temp-feitico" style="margin-top: 10px; font-style: italic; color: #aaa;"></div>
+                <br>
+                <button class="action-btn" onclick="uiCadastrarFeitico()">Salvar Feitiço</button>
+            </div>
+            <div id="tabela-feiticos"></div>
+        </div>
+
+        <!-- SEÇÃO POÇÕES -->
+        <div id="section-pocoes" class="section">
+            <h1>Gerenciar Poções</h1>
+            <div class="input-group">
+                <h3>Cadastrar Nova Poção</h3>
+                <input type="text" id="nova-pocao-nome" placeholder="Nome">
+                <input type="text" id="nova-pocao-desc" placeholder="Descrição">
+                <br><br>
+                <small>Ingredientes necessários:</small>
+                <div style="display: flex; gap: 10px; align-items: center; margin-top: 5px;">
+                    <select id="select-ingrediente-receita-pocao"></select>
+                    <button class="action-btn" onclick="adicionarIngredienteReceitaTemp('pocao')">+</button>
+                </div>
+                <div id="receita-temp-pocao" style="margin-top: 10px; font-style: italic; color: #aaa;"></div>
+                <br>
+                <button class="action-btn" onclick="uiCadastrarPocao()">Salvar Poção</button>
+            </div>
+            <div id="tabela-pocoes"></div>
+        </div>
+
+        <!-- SEÇÃO CRIAÇÃO -->
+        <div id="section-criacao" class="section">
+            <h1>Fábrica de Magia</h1>
+            
+            <div class="input-group">
+                <h3>Produção de Feitiços</h3>
+                <div id="lista-producao-feiticos"></div>
+            </div>
+
+            <div class="input-group">
+                <h3>Produção de Poções</h3>
+                <div id="lista-producao-pocoes"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
