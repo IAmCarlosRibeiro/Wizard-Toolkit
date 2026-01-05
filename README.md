@@ -1,9 +1,9 @@
 # 🧙‍♂️ Wizard Toolkit - Electron Edition
 
-![Badge Status](https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen)
-![Badge Electron](https://img.shields.io/badge/ELECTRON-28.0-blue?logo=electron)
-![Badge SQLite](https://img.shields.io/badge/SQLITE-DB-003B57?logo=sqlite)
-![Badge License](https://img.shields.io/badge/LICENSE-PROPRIETARY-red)
+![Badge Status](https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen?style=for-the-badge)
+![Badge Electron](https://img.shields.io/badge/ELECTRON-28.0-blue?style=for-the-badge&logo=electron)
+![Badge SQLite](https://img.shields.io/badge/SQLITE-DB-003B57?style=for-the-badge&logo=sqlite)
+![Badge License](https://img.shields.io/badge/LICENSE-PROPRIETARY-red?style=for-the-badge)
 
 > *"Não há bem nem mal, só há o poder, e aqueles que são demasiado fracos para o desejarem."*
 
