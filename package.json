@@ -8,8 +8,9 @@
     "rebuild": "electron-rebuild -f -w sqlite3"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Carlos Eduardo Santos Ribeiro",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "sqlite3": "^5.1.7"
   },
